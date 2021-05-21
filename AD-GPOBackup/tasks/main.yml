@@ -1,0 +1,15 @@
+---
+
+#- name: Copy The PowerShell
+#  win_copy:
+#    src: AD-PS-BackupGroupPolicyObjects.ps1
+#    dest: C:\Temp\AD-PS-BackupGroupPolicyObjects.ps1
+
+
+- name: Run the GroupPolicy Backup PS
+  win_command: powershell.exe -executionpolicy bypass -file C:/Temp/AD-PS-BackupGroupPolicyObjects.ps1
+
+
+
+#  win_shell: powershell.exe -executionpolicy bypass -nologo -file C:\Temp\AD-PS-BackupGroupPolicyObjects.ps1
+
